@@ -22,7 +22,8 @@ body {
   color: #333;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'Quintessential', cursive;
 }
 
@@ -46,12 +47,13 @@ p {
 }
 
 a {
-  color:#337ab7;
+  color: #337ab7;
   text-decoration: none;
   font-weight: 700;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #23527c;
   text-decoration: underline;
 }
@@ -60,12 +62,13 @@ a:hover, a:focus {
   text-align: center;
 }
 
-#main {
+.main {
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.articlecontainer { /* based on bootstrap .well */
+.articlecontainer {
+  /* based on bootstrap .well */
   margin-bottom: 20px;
   background-color: #ffffe6;
   margin: 0 auto;

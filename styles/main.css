@@ -14,7 +14,8 @@ body {
   color: #333;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'Quintessential', cursive;
 }
 
@@ -41,7 +42,8 @@ a {
   font-weight: 700;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #23527c;
   text-decoration: underline;
 }
@@ -50,7 +52,7 @@ a:hover, a:focus {
   text-align: center;
 }
 
-#main {
+.main {
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -65,7 +67,7 @@ a:hover, a:focus {
   border-radius: 4px;
 }
 
-#img-div {
+.img-container {
   width: 75%;
   margin: auto;
   background-color: #fff;
@@ -74,39 +76,39 @@ a:hover, a:focus {
   padding: 4px;
 }
 
-#image {
+.img {
   max-width: 100%;
   margin: auto;
   display: block;
 }
 
-#img-caption {
-  margin: 10px auto;
+.img-caption {
+  padding-top: 0.75rem;
 }
 
-#title {
+.title {
   margin: 0 auto;
 }
 
-#title p {
+.tagline {
   margin-top: 15px;
   font-size: 30px;
   font-style: italic;
 }
 
-#tribute-info {
+.tribute-info {
   width: 75%;
   margin: 40px auto 20px auto;
 }
 
-#link-section {
+.link-section {
   width: 75%;
   margin: auto;
   font-size: 16px;
 }
 
 footer {
-  margin: auto;
+  margin-top: 0.75rem;
   text-align: center;
 }
 

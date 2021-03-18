@@ -1,6 +1,6 @@
 // main: ./main.scss
 
-#img-div {
+.img-container {
   width: 75%;
   margin: auto;
   background-color: #fff;
@@ -9,12 +9,13 @@
   padding: 4px;
 }
 
-#image {
+.img {
   max-width: 100%;
   margin: auto;
   display: block;
 }
 
-#img-caption {
-  margin: 10px auto;
+.img-caption {
+  // margin: 10px auto;
+  padding-top: 0.75rem;
 }
