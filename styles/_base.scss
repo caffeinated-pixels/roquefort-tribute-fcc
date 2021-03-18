@@ -1,7 +1,7 @@
 // main: ./main.scss
 
 @mixin mq($size) {
-  @media only screen and (max-width: $size) {
+  @media only screen and (min-width: $size) {
     @content; /* lets us pass content block into mixin */
   }
 }
@@ -32,9 +32,10 @@ h2 {
 h1 {
   margin-top: 0;
   margin-bottom: auto;
-  /* padding-top: 50px; */
-  font-size: 80px;
-  // font-family: serif;
+  font-size: 3.125rem;
+  @include mq(480px) {
+    font-size: 5rem;
+  }
 }
 
 h2 {
@@ -65,6 +66,21 @@ a:focus {
 .main {
   margin: 0 auto;
   padding: 0 15px;
+
+  @include mq(768px) {
+    width: 750px;
+  }
+
+  @include mq(992px) {
+    width: 970px;
+  }
+
+  @include mq(1200px) {
+    width: 1170px;
+  }
+
+
+
 }
 
 .articlecontainer {

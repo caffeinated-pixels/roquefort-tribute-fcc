@@ -16,6 +16,10 @@
 }
 
 .img-caption {
-  // margin: 10px auto;
   padding-top: 0.75rem;
+  font-size: 0.625rem;
+
+  @include mq(480px) {
+    font-size: 0.9rem;
+  }
 }
