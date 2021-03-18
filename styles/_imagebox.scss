@@ -1,0 +1,20 @@
+// main: ./main.scss
+
+#img-div {
+  width: 75%;
+  margin: auto;
+  background-color: #fff;
+  border: thin solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+#image {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+#img-caption {
+  margin: 10px auto;
+}
