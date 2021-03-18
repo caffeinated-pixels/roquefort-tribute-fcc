@@ -1,0 +1,61 @@
+// main: ./main.scss
+
+@mixin mq($size) {
+  @media only screen and (max-width: $size) {
+    @content; /* lets us pass content block into mixin */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1.42857143;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Quintessential', cursive;
+}
+
+/* Most of the above values are based on bootstrap 3.3.7. I orignally made this page using bootstrap, but wanted to remake without as a learning exercise. */
+
+h1 {
+  margin-top: 0;
+  margin-bottom: auto;
+  /* padding-top: 50px; */
+  font-size: 80px;
+  // font-family: serif;
+}
+
+h2 {
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color:#337ab7;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover, a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.center-text {
+  text-align: center;
+}
