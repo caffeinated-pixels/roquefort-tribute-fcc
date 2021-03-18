@@ -1,47 +1,6 @@
 @import "_base";
 @import "_imagebox";
-
-#main {
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.articlecontainer { /* based on bootstrap .well */
-  margin-bottom: 20px;
-  background-color: #ffffe6;
-  margin: 0 auto;
-  padding: 19px;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
-}
-
-#title {
-  margin: 0 auto;
-}
-
-#title p {
-  margin-top: 15px;
-  font-size: 30px;
-  font-style: italic;
-}
-
-
-
-#tribute-info {
-  width: 75%;
-  margin: 40px auto 20px auto;
-}
-
-#link-section {
-  width: 75%;
-  margin: auto;
-  font-size: 16px;
-}
-
-footer {
-  margin: auto;
-  text-align: center;
-}
+@import "_textContent.scss";
 
 @media (max-width: 480px) {
   h1 {
