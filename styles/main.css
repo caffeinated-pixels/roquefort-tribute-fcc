@@ -2,19 +2,22 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 100%;
   line-height: 1.42857143;
   color: #333;
 }
 
-h1, h2, h3 {
+h1, h2 {
   /* font-family: inherit; */
-  font-weight: 500;
-  line-height: 1.1;
+  font-family: 'Quintessential', cursive;
   /* color: inherit; */
 }
 
@@ -24,11 +27,15 @@ h1 {
   margin-bottom: auto;
   /* padding-top: 50px; */
   font-size: 80px;
-  font-family: serif;
+}
+
+h2 {
+  margin-bottom: auto;
 }
 
 p {
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 a {
