@@ -51,4 +51,6 @@ const getNextSlide = () => {
 document.getElementById('prevSlide').addEventListener('click', getPrevSlide)
 document.getElementById('nextSlide').addEventListener('click', getNextSlide)
 
+setInterval(getNextSlide, 10000)
+
 // image.src = slides[0].src
