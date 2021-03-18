@@ -63,13 +63,13 @@ a:focus {
   text-align: center;
 }
 
-.main {
+.main-container {
   margin: 0 auto;
-  padding: 0 15px;
 
-  @include mq(768px) {
-    width: 750px;
-  }
+  // @include mq(768px) {
+  //   width: 750px;
+  //   padding: 0 15px;
+  // }
 
   @include mq(992px) {
     width: 970px;
@@ -78,17 +78,15 @@ a:focus {
   @include mq(1200px) {
     width: 1170px;
   }
-
-
-
 }
 
 .articlecontainer {
   /* based on bootstrap .well */
-  margin-bottom: 20px;
+
   background-color: #ffffe6;
+
   margin: 0 auto;
-  padding: 19px;
+  padding: 0.6rem;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
 }

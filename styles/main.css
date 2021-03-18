@@ -58,27 +58,19 @@ a:focus {
   text-align: center;
 }
 
-.main {
+.main-container {
   margin: 0 auto;
-  padding: 0 15px;
-}
-
-@media only screen and (min-width: 768px) {
-  .main {
-    width: 750px;
-    /* lets us pass content block into mixin */
-  }
 }
 
 @media only screen and (min-width: 992px) {
-  .main {
+  .main-container {
     width: 970px;
     /* lets us pass content block into mixin */
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main {
+  .main-container {
     width: 1170px;
     /* lets us pass content block into mixin */
   }
@@ -86,10 +78,9 @@ a:focus {
 
 .articlecontainer {
   /* based on bootstrap .well */
-  margin-bottom: 20px;
   background-color: #ffffe6;
   margin: 0 auto;
-  padding: 19px;
+  padding: 0.6rem;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
 }
@@ -100,7 +91,7 @@ a:focus {
   background-color: #fff;
   border: thin solid #ddd;
   border-radius: 4px;
-  padding: 4px;
+  padding: 1.5rem;
 }
 
 .img {
