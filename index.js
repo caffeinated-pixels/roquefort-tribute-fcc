@@ -1,25 +1,31 @@
 const slides = [
   {
     src: 'images/roquefort-wheels.jpg',
-    caption: 'Roquefort is ripened in underground caves for four to nine months'
+    caption:
+      'Roquefort is ripened in underground caves for four to nine months',
+    alt: 'wheels of roquefort cheese maturing in a cave'
   },
   {
     src: 'images/roquefort-wheels2.jpg',
-    caption: 'The cheese is kept at a constant 10°C and 95% while ripening'
+    caption: 'The cheese is kept at a constant 10°C and 95% while ripening',
+    alt: 'wheels of roquefort cheese maturing in a cave'
   },
   {
     src: 'images/roquefort-cellar.jpg',
     caption:
-      "Roquefort Société's undergound facility at Roquefort-sur-Soulzon, France"
+      "Roquefort Société's undergound facility at Roquefort-sur-Soulzon, France",
+    alt: 'the undergound cheese ripening caves at Roquefort Société'
   },
   {
     src: 'images/cheesemaker.jpg',
-    caption: "A cardboard cutout of one of Société's cave managers"
+    caption: "A cardboard cutout of one of Société's cave managers",
+    alt: "a cardboard cutout of one of Société's cave managers"
   },
   {
     src: 'images/roquefort-wedge.jpg',
     caption:
-      "A wedge of delicious Roquefort and some random goat's cheese I bought while in France!"
+      "A wedge of delicious Roquefort and some random goat's cheese I bought while in France!",
+    alt: 'a wedge of ready-to-eat Roquefort cheese'
   }
 ]
 
@@ -77,6 +83,7 @@ function getNextSlide(isAutoCarousel = false) {
 
 function changeSlide() {
   image.src = slides[slidePosition].src
+  image.alt = slides[slidePosition].alt
   caption.textContent = slides[slidePosition].caption
   image.classList.add('animateImg')
 }
