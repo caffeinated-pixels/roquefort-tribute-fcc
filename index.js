@@ -7,7 +7,8 @@ const slides = [
   },
   {
     src: 'images/roquefort-wheels2.jpg',
-    caption: 'The cheese is kept at a constant 10°C and 95% while ripening',
+    caption:
+      'The cheese is kept at a constant 10°C and 95% humidity while ripening',
     alt: 'wheels of roquefort cheese maturing in a cave'
   },
   {
