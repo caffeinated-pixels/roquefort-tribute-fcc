@@ -104,6 +104,8 @@ a:focus {
 .animateImg {
   -webkit-animation: fadeInImage 0.5s;
   animation: fadeInImage 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
 .img-caption {

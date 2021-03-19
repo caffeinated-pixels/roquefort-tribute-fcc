@@ -13,12 +13,13 @@
   max-width: 100%;
   margin: auto;
   display: block;
-
 }
 
 .animateImg {
-          -webkit-animation: fadeInImage 0.5s;
-                  animation: fadeInImage 0.5s;
+  -webkit-animation: fadeInImage 0.5s;
+  animation: fadeInImage 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
 .img-caption {
@@ -31,19 +32,19 @@
 }
 
 @-webkit-keyframes fadeInImage {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInImage {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
