@@ -31,7 +31,10 @@ const lastSlideIndex = slides.length - 1
 let intervalId
 
 document.getElementById('prevSlide').addEventListener('click', getPrevSlide)
-document.getElementById('nextSlide').addEventListener('click', getNextSlide)
+document
+  .getElementById('nextSlide')
+  .addEventListener('click', () => getNextSlide())
+
 document.addEventListener('animationend', () =>
   image.classList.remove('animateImg')
 )
@@ -39,7 +42,7 @@ document.addEventListener('animationend', () =>
 startInterval()
 
 function startInterval() {
-  intervalId = setInterval(autoCarousel, 10000)
+  intervalId = setInterval(() => getNextSlide(true), 5000)
 }
 
 function resetInterval() {
@@ -58,7 +61,9 @@ function getPrevSlide() {
   resetInterval()
 }
 
-function getNextSlide() {
+function getNextSlide(isAutoCarousel = false) {
+  console.log(isAutoCarousel)
+
   if (slidePosition === lastSlideIndex) {
     slidePosition = 0
   } else {
@@ -66,17 +71,8 @@ function getNextSlide() {
   }
 
   changeSlide()
-  resetInterval()
-}
 
-function autoCarousel() {
-  if (slidePosition === lastSlideIndex) {
-    slidePosition = 0
-  } else {
-    slidePosition++
-  }
-
-  changeSlide()
+  !isAutoCarousel && resetInterval()
 }
 
 function changeSlide() {
@@ -84,7 +80,3 @@ function changeSlide() {
   caption.textContent = slides[slidePosition].caption
   image.classList.add('animateImg')
 }
-
-// remove class when CSS animation finishes
-
-// image.src = slides[0].src
