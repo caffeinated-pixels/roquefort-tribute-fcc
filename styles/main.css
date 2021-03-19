@@ -166,6 +166,7 @@ a:focus {
   text-align: center;
   text-decoration: none;
   padding: 0;
+  /* fixes iOS alignment issue */
   font-weight: 700;
   font-family: inherit;
   color: white;

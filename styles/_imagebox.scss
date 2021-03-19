@@ -70,9 +70,8 @@
   background-color: #7bb2f6;
   text-align: center;
   text-decoration: none;
-  padding: 0;
+  padding: 0; /* fixes iOS alignment issue */
 
-  // font-size: 1.5rem;
   font-weight: 700;
   font-family: inherit;
   color: white;
