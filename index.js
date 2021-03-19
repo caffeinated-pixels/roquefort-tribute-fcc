@@ -44,12 +44,18 @@ const getNextSlide = () => {
   }
 
   // console.log(slidePosition)
-
+  // image.classList.remove('animateImg')
   image.src = slides[slidePosition].src
+  image.classList.add('animateImg')
 }
 
 document.getElementById('prevSlide').addEventListener('click', getPrevSlide)
 document.getElementById('nextSlide').addEventListener('click', getNextSlide)
+
+// remove class when CSS animation finishes
+document.addEventListener('animationend', () =>
+  image.classList.remove('animateImg')
+)
 
 setInterval(getNextSlide, 10000)
 

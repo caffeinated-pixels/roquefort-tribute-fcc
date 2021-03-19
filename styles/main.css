@@ -100,6 +100,11 @@ a:focus {
   display: block;
 }
 
+.animateImg {
+  -webkit-animation: fadeInImage 0.5s;
+  animation: fadeInImage 0.5s;
+}
+
 .img-caption {
   padding-top: 0.75rem;
   font-size: 0.625rem;
@@ -109,6 +114,24 @@ a:focus {
   .img-caption {
     font-size: 0.9rem;
     /* lets us pass content block into mixin */
+  }
+}
+
+@-webkit-keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

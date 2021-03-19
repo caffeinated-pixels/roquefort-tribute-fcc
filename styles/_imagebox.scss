@@ -13,6 +13,12 @@
   max-width: 100%;
   margin: auto;
   display: block;
+
+}
+
+.animateImg {
+          -webkit-animation: fadeInImage 0.5s;
+                  animation: fadeInImage 0.5s;
 }
 
 .img-caption {
@@ -22,4 +28,22 @@
   @include mq(480px) {
     font-size: 0.9rem;
   }
+}
+
+@-webkit-keyframes fadeInImage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
