@@ -9,9 +9,16 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 100%;
+  font-size: 90%;
   line-height: 1.42857143;
   color: #333;
+}
+
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 100%;
+    /* lets us pass content block into mixin */
+  }
 }
 
 h1,
@@ -144,23 +151,37 @@ a:focus {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
 }
 
 .slide-btn {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: unset;
   border-radius: 100%;
   cursor: pointer;
   box-shadow: 2px 2px 4px black;
-  font-size: 1.5rem;
+  background-color: #7bb2f6;
+  text-align: center;
+  text-decoration: none;
   font-weight: 700;
+  font-family: inherit;
+  color: white;
+}
+
+@media only screen and (min-width: 480px) {
+  .slide-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    /* lets us pass content block into mixin */
+  }
 }
 
 .slide-btn:hover, .slide-btn:focus {
   background-color: gray;
+  outline-style: none;
 }
 
 .slide-btn:active {
@@ -168,11 +189,39 @@ a:focus {
 }
 
 .prev-slide {
-  margin-left: 40px;
+  margin-left: 2%;
+}
+
+@media only screen and (min-width: 480px) {
+  .prev-slide {
+    margin-left: 3%;
+    /* lets us pass content block into mixin */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .prev-slide {
+    margin-left: 4%;
+    /* lets us pass content block into mixin */
+  }
 }
 
 .next-slide {
-  margin-right: 40px;
+  margin-right: 2%;
+}
+
+@media only screen and (min-width: 480px) {
+  .next-slide {
+    margin-right: 3%;
+    /* lets us pass content block into mixin */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .next-slide {
+    margin-right: 4%;
+    /* lets us pass content block into mixin */
+  }
 }
 
 .title {
@@ -193,12 +242,12 @@ a:focus {
 }
 
 .tribute-info {
-  width: 75%;
+  width: 90%;
   margin: 40px auto 20px auto;
 }
 
 .link-section {
-  width: 75%;
+  width: 90%;
   margin: auto;
   font-size: 16px;
 }

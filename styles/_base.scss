@@ -17,9 +17,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 100%;
+  font-size: 90%;
   line-height: 1.42857143;
   color: #333;
+
+  @include mq(480px) {
+    font-size: 100%;
+  }
 }
 
 h1,
@@ -83,7 +87,6 @@ a:focus {
 
 .articlecontainer {
   /* based on bootstrap .well */
-
   background-color: #ffffe6;
 
   margin: 0 auto;
