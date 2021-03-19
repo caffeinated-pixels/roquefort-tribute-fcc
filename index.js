@@ -42,7 +42,7 @@ document.addEventListener('animationend', () =>
 startInterval()
 
 function startInterval() {
-  intervalId = setInterval(() => getNextSlide(true), 5000)
+  intervalId = setInterval(() => getNextSlide(true), 10000)
 }
 
 function resetInterval() {
