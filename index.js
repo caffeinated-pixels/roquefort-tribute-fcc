@@ -2,26 +2,25 @@ const slides = [
   {
     id: 0,
     src: 'images/roquefort-wheels.jpg',
-    caption:
-      'The famous blue cheese maturing in the underground caves at Roquefort Société in Roquefort-sur-Soulzon, France '
+    caption: 'Roquefort is ripened in underground caves for four to nine months'
   },
   {
     id: 1,
     src: 'images/roquefort-cellar.jpg',
     caption:
-      'The famous blue cheese maturing in the underground caves at Roquefort Société in Roquefort-sur-Soulzon, France '
+      "Roquefort Société's undergound facility at Roquefort-sur-Soulzon, France"
   },
   {
     id: 2,
     src: 'images/cheesemaker.jpg',
-    caption:
-      'The famous blue cheese maturing in the underground caves at Roquefort Société in Roquefort-sur-Soulzon, France '
+    caption: 'Totally not a real Roquefort production worker!'
   }
 ]
 
 let slidePosition = 0
 
 const image = document.getElementById('image')
+const caption = document.getElementById('img-caption')
 const lastSlideIndex = slides.length - 1
 
 const getPrevSlide = () => {
@@ -46,6 +45,7 @@ const getNextSlide = () => {
   // console.log(slidePosition)
   // image.classList.remove('animateImg')
   image.src = slides[slidePosition].src
+  caption.textContent = slides[slidePosition].caption
   image.classList.add('animateImg')
 }
 
