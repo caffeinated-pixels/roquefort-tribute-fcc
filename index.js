@@ -14,7 +14,7 @@ const slides = [
   },
   {
     src: 'images/cheesemaker.jpg',
-    caption: 'Totally not a real Roquefort production worker!'
+    caption: "A cardboard cutout of one of Société's cave managers"
   },
   {
     src: 'images/roquefort-wedge.jpg',
