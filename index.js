@@ -3,31 +3,31 @@ const slides = [
     src: 'images/roquefort-wheels.jpg',
     caption:
       'Roquefort is ripened in underground caves for four to nine months',
-    alt: 'wheels of roquefort cheese maturing in a cave'
+    alt: 'wheels of roquefort cheese maturing in a cave',
   },
   {
     src: 'images/roquefort-wheels2.jpg',
     caption:
       'The cheese is kept at a constant 10°C and 95% humidity while ripening',
-    alt: 'wheels of roquefort cheese maturing in a cave'
+    alt: 'wheels of roquefort cheese maturing in a cave',
   },
   {
     src: 'images/roquefort-cellar.jpg',
     caption:
       "Roquefort Société's undergound facility at Roquefort-sur-Soulzon, France",
-    alt: 'the undergound cheese ripening caves at Roquefort Société'
+    alt: 'the undergound cheese ripening caves at Roquefort Société',
   },
   {
     src: 'images/cheesemaker.jpg',
     caption: "A cardboard cutout of one of Société's cave managers",
-    alt: "a cardboard cutout of one of Société's cave managers"
+    alt: "a cardboard cutout of one of Société's cave managers",
   },
   {
     src: 'images/roquefort-wedge.jpg',
     caption:
       "A wedge of delicious Roquefort and some random goat's cheese I bought while in France!",
-    alt: 'a wedge of ready-to-eat Roquefort cheese'
-  }
+    alt: 'a wedge of ready-to-eat Roquefort cheese',
+  },
 ]
 
 let slidePosition = 0
@@ -46,7 +46,7 @@ document.addEventListener('animationend', () =>
   image.classList.remove('animateImg')
 )
 
-startInterval()
+// startInterval()
 
 function startInterval() {
   intervalId = setInterval(() => getNextSlide(true), 10000)
@@ -54,7 +54,7 @@ function startInterval() {
 
 function resetInterval() {
   clearInterval(intervalId)
-  startInterval()
+  // startInterval()
 }
 
 function getPrevSlide() {
@@ -65,11 +65,11 @@ function getPrevSlide() {
   }
 
   changeSlide()
-  resetInterval()
+  // resetInterval()
 }
 
 function getNextSlide(isAutoCarousel = false) {
-  console.log(isAutoCarousel)
+  // console.log(isAutoCarousel)
 
   if (slidePosition === lastSlideIndex) {
     slidePosition = 0
@@ -79,7 +79,7 @@ function getNextSlide(isAutoCarousel = false) {
 
   changeSlide()
 
-  !isAutoCarousel && resetInterval()
+  // !isAutoCarousel && resetInterval()
 }
 
 function changeSlide() {
