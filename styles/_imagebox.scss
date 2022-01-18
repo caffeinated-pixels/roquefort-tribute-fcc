@@ -17,19 +17,8 @@
 }
 
 .animateImg {
-  -webkit-animation: fadeInImage 0.5s;
   animation: fadeInImage 0.5s;
-  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes fadeInImage {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes fadeInImage {
@@ -54,7 +43,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position:absolute;
+  position: absolute;
   top: 47%;
   transform: translateY(-50%);
 }
@@ -83,7 +72,8 @@
   }
 }
 
-.slide-btn:hover, .slide-btn:focus {
+.slide-btn:hover,
+.slide-btn:focus {
   background-color: gray;
   outline-style: none;
 }

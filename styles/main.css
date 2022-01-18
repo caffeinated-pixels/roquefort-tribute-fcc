@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -111,9 +112,9 @@ a:focus {
 
 .animateImg {
   -webkit-animation: fadeInImage 0.5s;
-  animation: fadeInImage 0.5s;
+          animation: fadeInImage 0.5s;
   -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 @-webkit-keyframes fadeInImage {
@@ -148,11 +149,16 @@ a:focus {
 
 .btn-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
   top: 47%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .slide-btn {
@@ -161,7 +167,8 @@ a:focus {
   border: unset;
   border-radius: 100%;
   cursor: pointer;
-  box-shadow: 2px 2px 4px black;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
   background-color: #7bb2f6;
   text-align: center;
   text-decoration: none;
@@ -181,13 +188,15 @@ a:focus {
   }
 }
 
-.slide-btn:hover, .slide-btn:focus {
+.slide-btn:hover,
+.slide-btn:focus {
   background-color: gray;
   outline-style: none;
 }
 
 .slide-btn:active {
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .prev-slide {
