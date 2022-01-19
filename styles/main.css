@@ -28,7 +28,6 @@ h2 {
   text-shadow: 1px 1px 2px gray;
 }
 
-/* Most of the above values are based on bootstrap 3.3.7. I orignally made this page using bootstrap, but wanted to remake without as a learning exercise. */
 h1 {
   margin-top: 0;
   margin-bottom: auto;
@@ -67,31 +66,10 @@ a:focus {
   text-align: center;
 }
 
-.main-container {
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 992px) {
-  .main-container {
-    width: 970px;
-    /* lets us pass content block into mixin */
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .main-container {
-    width: 1170px;
-    /* lets us pass content block into mixin */
-  }
-}
-
 .articlecontainer {
-  /* based on bootstrap .well */
   background-color: #ffffe6;
-  margin: 0 auto;
-  padding: 0.6rem;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
+  padding: 0.6em;
+  border-bottom: 2px solid #e3e3e3;
 }
 
 .carousel {
