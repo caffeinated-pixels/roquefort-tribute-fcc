@@ -47,7 +47,7 @@ prevSlideBtn.addEventListener('click', (e) => {
   const prevSlide = document.getElementById(prevSlideId)
   slidePosition--
 
-  moveToSlide(currentSlide, prevSlide)
+  moveToSlide(prevSlide)
 })
 
 nextSlideBtn.addEventListener('click', (e) => {
@@ -59,7 +59,7 @@ nextSlideBtn.addEventListener('click', (e) => {
   const nextSlide = document.getElementById(nextSlideId)
   slidePosition++
 
-  moveToSlide(currentSlide, nextSlide)
+  moveToSlide(nextSlide)
 })
 
 initializeCarousel()
@@ -96,7 +96,7 @@ function initializeCarousel() {
   carouselTrack.appendChild(fragment)
 }
 
-function moveToSlide(currentSlide, targetSlide) {
+function moveToSlide(targetSlide) {
   carouselTrack.style.transform = `translateX(-${targetSlide.style.left})`
 }
 
