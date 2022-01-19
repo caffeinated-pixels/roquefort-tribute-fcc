@@ -67,8 +67,14 @@ a:focus {
   text-align: center;
 }
 
-.articlecontainer {
+.main-container {
   background-color: #ffffe6;
   padding: 0.6em;
   border-bottom: 2px solid #e3e3e3;
+}
+
+.articlecontainer {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
