@@ -32,6 +32,24 @@ const slides = [
 
 const carousel = document.getElementById('carousel')
 const carouselTrack = document.getElementById('carousel-track')
+const prevSlideBtn = document.getElementById('prevSlide')
+const nextSlideBtn = document.getElementById('nextSlide')
+
+let slidePosition = 0
+const finalSlide = slides.length - 1
+
+prevSlideBtn.addEventListener('click', moveToSlide)
+
+nextSlideBtn.addEventListener('click', (e) => {
+  console.log('click')
+  const currentSlideId = `slide-${slidePosition}`
+  const currentSlide = document.getElementById(currentSlideId)
+  const nextSlideId = `slide-${slidePosition + 1}`
+  const nextSlide = document.getElementById(nextSlideId)
+  slidePosition++
+
+  moveToSlide(currentSlide, nextSlide)
+})
 
 initializeCarousel()
 
@@ -57,6 +75,10 @@ function initializeCarousel() {
   })
 
   carouselTrack.appendChild(fragment)
+}
+
+function moveToSlide(currentSlide, targetSlide) {
+  carouselTrack.style.transform = `translateX(-${targetSlide.style.left})`
 }
 
 // let slidePosition = 0
