@@ -35,8 +35,9 @@ const carouselTrack = document.getElementById('carousel-track')
 function initializeCarousel() {
   const fragment = document.createDocumentFragment()
 
-  slides.forEach((slide) => {
+  slides.forEach((slide, index) => {
     const li = document.createElement('li')
+    li.id = `slide-${index}`
     li.className = 'carousel__slide'
 
     const img = document.createElement('img')
