@@ -55,10 +55,8 @@
   </head>
 
   <body>
-    <div id="main" class="main-container">
+    <main id="main" class="main-container">
       <div class="articlecontainer">
-        <!-- based on bootstrap .well -->
-
         <!--Start of title plus headline section-->
         <div id="title" class="title center-text">
           <h1>Roquefort</h1>
@@ -66,18 +64,9 @@
         </div>
         <!--End of title plus headline section-->
 
-        <!--Start of image section-->
-        <div id="img-div" class="img-container">
-          <img
-            id="image"
-            class="img"
-            src="images/roquefort-wheels.jpg"
-            alt="wheels of roquefort cheese maturing in a cave"
-          />
-          <div id="img-caption" class="img-caption center-text">
-            Roquefort is ripened in underground caves for four to nine months
-          </div>
-
+        <!--Start of image carousel-->
+        <div id="carousel" class="carousel">
+          <ul id="carousel-track" class="carousel__track"></ul>
           <div class="btn-container">
             <button
               id="prevSlide"
@@ -222,21 +211,20 @@
         <!--End of link section-->
       </div>
       <!--End of articlecontainer section-->
-
-      <!--Start of footer section-->
-      <footer>
-        <p>
-          Writing, photography & coding by
-          <a
-            href="https://steviegill-webportfolio.netlify.app/"
-            target="”_blank”"
-            >Stevie Gill</a
-          >.
-        </p>
-      </footer>
-      <!--End of footer section-->
-    </div>
+    </main>
     <!--End of main section-->
+
+    <!--Start of footer section-->
+    <footer>
+      <p>
+        Writing, photography & coding by
+        <a href="https://steviegill-webportfolio.netlify.app/" target="”_blank”"
+          >Stevie Gill</a
+        >.
+      </p>
+    </footer>
+    <!--End of footer section-->
+
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

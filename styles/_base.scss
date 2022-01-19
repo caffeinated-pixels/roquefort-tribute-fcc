@@ -32,12 +32,11 @@ h2 {
   text-shadow: 1px 1px 2px gray;
 }
 
-/* Most of the above values are based on bootstrap 3.3.7. I orignally made this page using bootstrap, but wanted to remake without as a learning exercise. */
-
 h1 {
   margin-top: 0;
   margin-bottom: auto;
   font-size: 3.125rem;
+
   @include mq(480px) {
     font-size: 5rem;
   }
@@ -69,28 +68,13 @@ a:focus {
 }
 
 .main-container {
-  margin: 0 auto;
-
-  // @include mq(768px) {
-  //   width: 750px;
-  //   padding: 0 15px;
-  // }
-
-  @include mq(992px) {
-    width: 970px;
-  }
-
-  @include mq(1200px) {
-    width: 1170px;
-  }
+  background-color: #ffffe6;
+  padding: 0.6em;
+  border-bottom: 2px solid #e3e3e3;
 }
 
 .articlecontainer {
-  /* based on bootstrap .well */
-  background-color: #ffffe6;
-
+  width: 90%;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0.6rem;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
 }
