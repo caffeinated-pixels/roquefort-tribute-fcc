@@ -38,10 +38,17 @@ const nextSlideBtn = document.getElementById('nextSlide')
 let slidePosition = 0
 const finalSlide = slides.length - 1
 
-prevSlideBtn.addEventListener('click', moveToSlide)
+prevSlideBtn.addEventListener('click', (e) => {
+  const currentSlideId = `slide-${slidePosition}`
+  const currentSlide = document.getElementById(currentSlideId)
+  const prevSlideId = `slide-${slidePosition - 1}`
+  const prevSlide = document.getElementById(prevSlideId)
+  slidePosition--
+
+  moveToSlide(currentSlide, prevSlide)
+})
 
 nextSlideBtn.addEventListener('click', (e) => {
-  console.log('click')
   const currentSlideId = `slide-${slidePosition}`
   const currentSlide = document.getElementById(currentSlideId)
   const nextSlideId = `slide-${slidePosition + 1}`
