@@ -38,7 +38,7 @@ const nextSlideBtn = document.getElementById('nextSlide')
 let slidePosition = 0
 const finalSlide = slides.length - 1
 
-window.onresize = reportWindowResize
+window.onresize = correctOffsetsOnResize
 
 prevSlideBtn.addEventListener('click', (e) => {
   if (slidePosition === 0) slidePosition = finalSlide + 1
@@ -96,10 +96,21 @@ function initializeCarousel() {
 
 function moveToSlide(targetSlide) {
   carouselTrack.style.transform = `translateX(-${targetSlide.style.left})`
+  carouselTrack.style.removeProperty('transition')
 }
 
-function reportWindowResize() {
-  console.log(window.innerWidth)
+function correctOffsetsOnResize() {
+  const slideWidth = carousel.getBoundingClientRect().width
+  const slides = carouselTrack.querySelectorAll('.carousel__slide')
+  slides.forEach(
+    (slide, index) => (slide.style.left = slideWidth * index + 'px')
+  )
+
+  const currentSlideId = `slide-${slidePosition}`
+  const currentSlide = document.getElementById(currentSlideId)
+
+  carouselTrack.style.transition = 'none'
+  carouselTrack.style.transform = `translateX(-${currentSlide.style.left})`
 }
 
 // let slidePosition = 0
