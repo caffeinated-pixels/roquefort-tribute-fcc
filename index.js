@@ -76,12 +76,20 @@ function initializeCarousel() {
     li.classList.add('carousel__slide')
     li.style.left = slideWidth * index + 'px'
 
+    const figure = document.createElement('figure')
+
     const img = document.createElement('img')
     img.className = 'carousel__image'
     img.src = slide.src
-    img.alt = ''
+    img.alt = slide.alt
 
-    li.appendChild(img)
+    const caption = document.createElement('figcaption')
+    caption.textContent = slide.caption
+    caption.className = 'img-caption center-text'
+
+    figure.appendChild(img)
+    figure.appendChild(caption)
+    li.appendChild(figure)
     fragment.appendChild(li)
   })
 

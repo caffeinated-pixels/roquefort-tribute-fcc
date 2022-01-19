@@ -132,31 +132,6 @@ a:focus {
      object-fit: cover;
 }
 
-.animateImg {
-  -webkit-animation: fadeInImage 0.5s;
-          animation: fadeInImage 0.5s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes fadeInImage {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInImage {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .img-caption {
   padding: 0.75rem 0.25rem 0;
   font-size: 0.625rem;
