@@ -38,6 +38,8 @@ const nextSlideBtn = document.getElementById('nextSlide')
 let slidePosition = 0
 const finalSlide = slides.length - 1
 
+window.onresize = reportWindowResize
+
 prevSlideBtn.addEventListener('click', (e) => {
   if (slidePosition === 0) slidePosition = finalSlide + 1
 
@@ -94,6 +96,10 @@ function initializeCarousel() {
 
 function moveToSlide(targetSlide) {
   carouselTrack.style.transform = `translateX(-${targetSlide.style.left})`
+}
+
+function reportWindowResize() {
+  console.log(window.innerWidth)
 }
 
 // let slidePosition = 0
