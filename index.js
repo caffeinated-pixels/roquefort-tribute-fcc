@@ -30,15 +30,20 @@ const slides = [
   },
 ]
 
+const carousel = document.getElementById('carousel')
 const carouselTrack = document.getElementById('carousel-track')
+
+initializeCarousel()
 
 function initializeCarousel() {
   const fragment = document.createDocumentFragment()
+  const slideWidth = carousel.getBoundingClientRect().width
 
   slides.forEach((slide, index) => {
     const li = document.createElement('li')
     li.id = `slide-${index}`
     li.className = 'carousel__slide'
+    li.style.left = slideWidth * index + 'px'
 
     const img = document.createElement('img')
     img.className = 'carousel__image'
@@ -51,8 +56,6 @@ function initializeCarousel() {
 
   carouselTrack.appendChild(fragment)
 }
-
-initializeCarousel()
 
 // let slidePosition = 0
 
