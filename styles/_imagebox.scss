@@ -2,7 +2,8 @@
 
 .carousel {
   position: relative;
-  width: 75%;
+  width: 95%;
+  max-width: 900px;
   margin: auto;
   background-color: #fff;
   outline: thin solid #ddd;
@@ -39,7 +40,7 @@ figure {
 
 .img-caption {
   padding: 0.75rem 0.25rem 0;
-  font-size: 0.625rem;
+  font-size: 0.75rem;
 
   @include mq(480px) {
     font-size: 0.9rem;
@@ -47,22 +48,20 @@ figure {
 }
 
 .btn-container {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 47%;
-  transform: translateY(-50%);
 }
 
 .slide-btn {
   width: 30px;
   height: 30px;
-  border: unset;
+  border: 0;
   border-radius: 100%;
 
   cursor: pointer;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   background-color: #7bb2f6;
   text-align: center;
   text-decoration: none;
@@ -79,36 +78,14 @@ figure {
   }
 }
 
-.slide-btn:hover,
-.slide-btn:focus {
+.slide-btn:hover {
   background-color: gray;
-  outline-style: none;
+}
+
+.slide-btn:focus-visible {
+  outline: 2px solid orange;
 }
 
 .slide-btn:active {
   transform: scale(0.9);
-}
-
-.prev-slide {
-  margin-left: 2%;
-
-  @include mq(480px) {
-    margin-left: 3%;
-  }
-
-  @include mq(768px) {
-    margin-left: 4%;
-  }
-}
-
-.next-slide {
-  margin-right: 2%;
-
-  @include mq(480px) {
-    margin-right: 3%;
-  }
-
-  @include mq(768px) {
-    margin-right: 4%;
-  }
 }
