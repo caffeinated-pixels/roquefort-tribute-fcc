@@ -41,8 +41,6 @@ const finalSlide = slides.length - 1
 prevSlideBtn.addEventListener('click', (e) => {
   if (slidePosition === 0) slidePosition = finalSlide + 1
 
-  const currentSlideId = `slide-${slidePosition}`
-  const currentSlide = document.getElementById(currentSlideId)
   const prevSlideId = `slide-${slidePosition - 1}`
   const prevSlide = document.getElementById(prevSlideId)
   slidePosition--
@@ -53,8 +51,6 @@ prevSlideBtn.addEventListener('click', (e) => {
 nextSlideBtn.addEventListener('click', (e) => {
   if (slidePosition === finalSlide) slidePosition = -1
 
-  const currentSlideId = `slide-${slidePosition}`
-  const currentSlide = document.getElementById(currentSlideId)
   const nextSlideId = `slide-${slidePosition + 1}`
   const nextSlide = document.getElementById(nextSlideId)
   slidePosition++
