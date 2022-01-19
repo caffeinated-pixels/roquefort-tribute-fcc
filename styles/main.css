@@ -102,12 +102,26 @@ a:focus {
   border: thin solid #ddd;
   border-radius: 4px;
   padding: 1.5rem 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-.img {
+.carousel__track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.carousel__image {
   max-width: 100%;
-  margin: auto;
-  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .animateImg {

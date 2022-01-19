@@ -30,61 +30,84 @@ const slides = [
   },
 ]
 
-let slidePosition = 0
+const carouselTrack = document.getElementById('carousel-track')
 
-const image = document.getElementById('image')
-const caption = document.getElementById('img-caption')
-const lastSlideIndex = slides.length - 1
-let intervalId
+function initializeCarousel() {
+  const fragment = document.createDocumentFragment()
 
-document.getElementById('prevSlide').addEventListener('click', getPrevSlide)
-document
-  .getElementById('nextSlide')
-  .addEventListener('click', () => getNextSlide())
+  slides.forEach((slide) => {
+    const li = document.createElement('li')
+    li.className = 'carousel__slide'
 
-document.addEventListener('animationend', () =>
-  image.classList.remove('animateImg')
-)
+    const img = document.createElement('img')
+    img.className = 'carousel__image'
+    img.src = slide.src
+    img.alt = ''
 
-// startInterval()
+    li.appendChild(img)
+    fragment.appendChild(li)
+  })
 
-function startInterval() {
-  intervalId = setInterval(() => getNextSlide(true), 10000)
+  carouselTrack.appendChild(fragment)
 }
 
-function resetInterval() {
-  clearInterval(intervalId)
-  // startInterval()
-}
+initializeCarousel()
 
-function getPrevSlide() {
-  if (slidePosition === 0) {
-    slidePosition = lastSlideIndex
-  } else {
-    slidePosition--
-  }
+// let slidePosition = 0
 
-  changeSlide()
-  // resetInterval()
-}
+// const image = document.getElementById('image')
+// const caption = document.getElementById('img-caption')
+// const lastSlideIndex = slides.length - 1
+// let intervalId
 
-function getNextSlide(isAutoCarousel = false) {
-  // console.log(isAutoCarousel)
+// document.getElementById('prevSlide').addEventListener('click', getPrevSlide)
+// document
+//   .getElementById('nextSlide')
+//   .addEventListener('click', () => getNextSlide())
 
-  if (slidePosition === lastSlideIndex) {
-    slidePosition = 0
-  } else {
-    slidePosition++
-  }
+// document.addEventListener('animationend', () =>
+//   image.classList.remove('animateImg')
+// )
 
-  changeSlide()
+// // startInterval()
 
-  // !isAutoCarousel && resetInterval()
-}
+// function startInterval() {
+//   intervalId = setInterval(() => getNextSlide(true), 10000)
+// }
 
-function changeSlide() {
-  image.src = slides[slidePosition].src
-  image.alt = slides[slidePosition].alt
-  caption.textContent = slides[slidePosition].caption
-  image.classList.add('animateImg')
-}
+// function resetInterval() {
+//   clearInterval(intervalId)
+//   // startInterval()
+// }
+
+// function getPrevSlide() {
+//   if (slidePosition === 0) {
+//     slidePosition = lastSlideIndex
+//   } else {
+//     slidePosition--
+//   }
+
+//   changeSlide()
+//   // resetInterval()
+// }
+
+// function getNextSlide(isAutoCarousel = false) {
+//   // console.log(isAutoCarousel)
+
+//   if (slidePosition === lastSlideIndex) {
+//     slidePosition = 0
+//   } else {
+//     slidePosition++
+//   }
+
+//   changeSlide()
+
+//   // !isAutoCarousel && resetInterval()
+// }
+
+// function changeSlide() {
+//   image.src = slides[slidePosition].src
+//   image.alt = slides[slidePosition].alt
+//   caption.textContent = slides[slidePosition].caption
+//   image.classList.add('animateImg')
+// }
