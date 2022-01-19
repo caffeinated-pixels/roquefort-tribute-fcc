@@ -68,7 +68,6 @@ function initializeCarousel() {
 
   slides.forEach((slide, index) => {
     const li = document.createElement('li')
-    if (index === 0) li.classList.add('current-slide')
 
     li.id = `slide-${index}`
     li.classList.add('carousel__slide')
